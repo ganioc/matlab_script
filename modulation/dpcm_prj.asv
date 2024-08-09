@@ -1,0 +1,7 @@
+% dpcm_prj.m
+n=2^3;
+t=[0:100]*pi/20;
+y=cos(t);
+[predictor, codebook, partition]=dpcmopt(y,1,n);
+[index,quant]=dpcmenco(y,codebook, ,partition, predictor);
+[sig,equa
